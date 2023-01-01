@@ -3,6 +3,8 @@
     <head>
 
         <link href="{{ asset('build') }}/assets/main.67dcdfd2.css" rel="stylesheet" >
+        <link href="{{ asset('build') }}/assets/style.css" rel="stylesheet" >
+        <link href="{{ asset('build') }}/assets/responsive.css" rel="stylesheet" >
 
     </head>
 

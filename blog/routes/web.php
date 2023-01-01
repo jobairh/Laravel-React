@@ -1,18 +1,22 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\homeController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+
+Route::get('/getCourseFeatures',[homeController::class, 'getCourseFeatures'])->name('getCourseFeatures');
+Route::get('/getCoursePlan',[homeController::class, 'getCoursePlan'])->name('getCoursePlan');
+Route::get('/getPaymentGuide',[homeController::class, 'getPaymentGuide'])->name('getPaymentGuide');
+Route::get('/getMoreSeries',[homeController::class, 'getMoreSeries'])->name('getMoreSeries');
+
+
 
 Route::get('/', function () {
     return view('index');
 });
+
+Route::get('{reactRoutePath}', function () {
+    return view('index');
+})->where('reactRoutePath', '.*');
+
+
